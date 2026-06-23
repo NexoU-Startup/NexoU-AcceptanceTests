@@ -1,4 +1,3 @@
--US21
 Tittle
 Contacto directo con el oferente 
 Description
