@@ -9,3 +9,7 @@ Scenario 1: Envío de solicitud completa
 Given que el estudiante visualiza un servicio de su interés,
 When completa la descripción, fecha límite, presupuesto y modalidad deseada,
 Then el sistema envía la solicitud al oferente.
+Scenario 2: Validación de campos obligatorios
+Given que el estudiante intenta enviar una solicitud incompleta,
+When presiona el botón “Enviar solicitud”,
+Then el sistema muestra un mensaje indicando los campos pendientes.
