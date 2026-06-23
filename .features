@@ -1,0 +1,289 @@
++EP1:
+
+-US01
+Tittle
+Búsqueda de servicios por categoría 
+Description
+Como estudiante solicitante,
+quiero buscar servicios por categoría,
+para encontrar rápidamente apoyo académico o digital según mi necesidad. 
+Acceptance criteria: 
+Scenario: Búsqueda exitosa de servicios
+Given que el estudiante se encuentra en la pantalla principal
+When selecciona una categoría de servicio
+Then el sistema muestra los servicios relacionados a esa categoría
+
+-US02
+Tittle
+Visualización de valoraciones del oferente 
+Description
+Como estudiante solicitante,
+quiero visualizar las valoraciones y comentarios de otros usuarios,
+para sentir mayor confianza antes de contactar a un oferente. 
+Acceptance criteria: 
+Scenario: Visualización de valoraciones
+Given que el estudiante ingresa al perfil de un oferente
+When revisa la sección de reseñas
+Then el sistema muestra comentarios y puntuaciones de otros estudiantes
+
+
+-US03
+Tittle
+Filtro por universidad y modalidad 
+Description
+Como estudiante solicitante, 
+quiero filtrar servicios por universidad y modalidad, 
+para encontrar opciones más cercanas a mi contexto académico y forma de atención preferida. 
+Acceptance criteria: 
+Scenario 1: Filtrado exitoso por universidad
+Given que el estudiante se encuentra en la sección de búsqueda,
+When selecciona una universidad en los filtros,
+Then el sistema muestra servicios ofrecidos por estudiantes de esa universidad.
+
+Scenario 2: Filtrado por modalidad
+Given que el estudiante se encuentra en la sección de búsqueda,
+When selecciona modalidad virtual, presencial o híbrida,
+Then el sistema muestra servicios que coinciden con la modalidad seleccionada.
+
++EP02
+
+-US11
+Tittle
+Publicación de servicio universitario 
+Description
+Como estudiante oferente,
+quiero publicar mis habilidades y servicios,
+para conseguir oportunidades dentro de mi comunidad universitaria. 
+Acceptance criteria: 
+Scenario: Publicación de servicio
+Given que el estudiante completó la información del servicio
+When presiona el botón "Publicar"
+Then el sistema registra y muestra el servicio en la plataforma
+
+
+-US12
+Tittle
+Registro de portafolio del oferente 
+Description
+Como estudiante oferente,
+quiero agregar ejemplos o portafolio de trabajos previos,
+para demostrar experiencia y generar confianza. 
+Acceptance criteria: 
+Scenario: Carga de portafolio
+Given que el estudiante se encuentra editando su perfil
+When agrega imágenes o enlaces de trabajos anteriores
+Then el sistema muestra el contenido dentro de su perfil público
+
+
+-US13
+Tittle
+Configuración de disponibilidad del oferente 
+Description
+Como estudiante oferente, 
+quiero registrar mis horarios disponibles, 
+para que los solicitantes sepan cuándo puedo aceptar o entregar servicios. 
+Acceptance criteria: 
+Scenario 1: Registro de disponibilidad
+Given que el estudiante oferente se encuentra editando su perfil,
+When selecciona días y horarios disponibles,
+Then el sistema guarda y muestra su disponibilidad en su perfil.
+
+Scenario 2: Actualización de disponibilidad
+Given que el oferente ya tiene horarios registrados,
+When modifica sus días u horas disponibles,
+Then el sistema actualiza la información visible para los solicitantes.
+
+
+
++EP03
+
+-US21
+Tittle
+Contacto directo con el oferente 
+Description
+Como estudiante solicitante,
+quiero contactar al oferente mediante un chat o medio directo,
+para coordinar detalles del servicio y tiempos de entrega. 
+Acceptance criteria: 
+Scenario: Inicio de conversación
+Given que el estudiante visualiza un servicio
+When presiona el botón "Contactar"
+Then el sistema habilita un canal de comunicación con el oferente
+
+
+-US22
+Tittle
+Solicitud detallada de servicio 
+Description
+Como estudiante solicitante, 
+quiero enviar una solicitud detallada del servicio que necesito, 
+para que el oferente comprenda el alcance, fecha límite y condiciones antes de aceptar. 
+
+
+Acceptance criteria: 
+Scenario 1: Envío de solicitud completa
+Given que el estudiante visualiza un servicio de su interés,
+When completa la descripción, fecha límite, presupuesto y modalidad deseada,
+Then el sistema envía la solicitud al oferente.
+
+Scenario 2: Validación de campos obligatorios
+Given que el estudiante intenta enviar una solicitud incompleta,
+When presiona el botón “Enviar solicitud”,
+Then el sistema muestra un mensaje indicando los campos pendientes.
+
+
+
+
+
+-US23
+Tittle
+Envío de propuesta del oferente 
+Description
+Como estudiante oferente, 
+quiero responder a una solicitud con una propuesta clara, para indicar precio, alcance del servicio, tiempo de entrega y modalidad de compensación. 
+Acceptance criteria: 
+Scenario 1: Envío de propuesta completa
+Given que el oferente recibe una solicitud de servicio,
+When ingresa precio, alcance, tiempo estimado y modalidad de pago o intercambio,
+Then el sistema envía la propuesta al solicitante.
+
+Scenario 2: Propuesta incompleta
+Given que el oferente deja campos obligatorios vacíos,
+When intenta enviar la propuesta,
+Then el sistema muestra una alerta indicando que debe completar la información faltante.
+
+
++EP04
+-US31
+Tittle
+Descarga de comprobante del servicio finalizado
+Description
+Como usuario de la plataforma,
+quiero descargar un comprobante del servicio finalizado,
+para conservar un registro de los acuerdos y actividades realizadas dentro de la plataforma. 
+Acceptance criteria: 
+Scenario 1: Descarga exitosa del comprobante
+ Given que el servicio se encuentra en estado “Finalizado”
+ When el usuario presiona el botón “Descargar comprobante”
+ Then el sistema genera y descarga un archivo con el resumen del servicio realizado
+Scenario 2: Intento de descarga de servicio no finalizado
+ Given que el servicio aún no se encuentra finalizado
+ When el usuario intenta descargar el comprobante
+ Then el sistema muestra el mensaje “El comprobante solo está disponible para servicios finalizados”
+
+
+-US32
+Tittle
+Seguimiento del estado del servicio 
+Description
+Como usuario de la plataforma, 
+quiero visualizar el estado del servicio solicitado u ofrecido, 
+para conocer si está pendiente, aceptado, en proceso, entregado o finalizado. 
+Acceptance criteria: 
+Scenario 1: Visualización del estado del servicio
+Given que el usuario tiene una solicitud activa,
+When ingresa a la sección “Mis servicios”,
+Then el sistema muestra el estado actual del servicio.
+
+Scenario 2: Actualización de estado por el oferente
+Given que el oferente está trabajando en un servicio aceptado,
+When cambia el estado a “En proceso” o “Entregado”,
+Then el sistema actualiza el estado visible para ambas partes.
+
+Scenario 3: Confirmación de finalización
+Given que el solicitante recibió el servicio,
+When confirma la entrega como finalizada,
+Then el sistema cambia el estado a “Finalizado” y habilita la valoración.
+
+
+-US33
+Tittle
+Valoración del servicio finalizado 
+Description
+Como estudiante solicitante,
+quiero valorar el servicio recibido después de finalizarlo,
+para compartir mi experiencia y ayudar a otros estudiantes a tomar mejores decisiones. 
+Acceptance criteria: 
+Scenario 1: Valoración exitosa del servicio
+Given que el servicio se encuentra en estado “Finalizado”
+When el solicitante selecciona una puntuación y escribe un comentario
+Then el sistema registra la valoración y la muestra en el perfil del oferente
+
+Scenario 2: Valoración sin comentario escrito
+Given que el servicio se encuentra en estado “Finalizado”
+When el solicitante selecciona una puntuación pero no escribe comentario
+Then el sistema permite registrar la valoración solo con puntuación
+
+Scenario 3: Intento de valorar un servicio no finalizado
+Given que el servicio aún se encuentra en estado “Pendiente”, “Aceptado” o “En proceso”
+When el solicitante intenta valorar el servicio
+Then el sistema muestra el mensaje “Solo puedes valorar servicios finalizados”
+
+
++EP05
+
+-US41
+Tittle
+Registro con datos universitarios
+Description
+Como estudiante nuevo,
+quiero registrarme con mis credenciales universitarias,
+para acceder de forma segura y validada a la plataforma.
+Acceptance criteria: 
+Scenario 1: Registro exitoso
+Given que el estudiante ingresa sus datos universitarios
+When confirma el registro
+Then el sistema valida y crea su cuenta.
+
+Scenario 2: Error en credenciales
+Given que el estudiante ingresa datos incorrectos
+When intenta registrarse
+Then el sistema muestra un mensaje de error y solicita corrección.
+
+
+-US42
+Tittle
+Selección de rol inicial
+Description
+Como estudiante registrado,
+quiero elegir mi rol (solicitante u oferente),
+para personalizar mi experiencia desde el inicio.
+Acceptance criteria: 
+Scenario 1: Rol seleccionado
+Given que el estudiante accede al onboarding
+When selecciona su rol
+Then la plataforma adapta la interfaz según su elección.
+
+Scenario 2:
+Cambio de rol
+Given que el estudiante ya eligió un rol 
+When decide cambiarlo
+The el sistema permite actualizar su selección en ajustes.
+
+
+-US43
+Tittle
+Guia inicial paso a paso
+Description
+Como estudiante nuevo,
+quiero recibir una guía interactiva, 
+para entender cómo funciona la plataforma sin confusión.
+
+
+
+Acceptance criteria: 
+Scenario 1: Guía mostrada
+Given que el estudiante completa su registro
+When accede por primera vez
+Then el sistema despliega una guía paso a paso.
+
+Scenario 2: Omitir guía 
+Given que el estudiante inicia la guía
+When decide saltarla
+Then el sistema permite omitir y acceder directamente a la plataforma
+
+Scenario 3: Reanudar guía interrumpida
+Given que el estudiante dejó la guía a medias
+When vuelve a iniciar sesión
+Then el sistema le permite continuar desde el último paso completado de la guía.
+
